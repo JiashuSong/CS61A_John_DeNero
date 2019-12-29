@@ -4,7 +4,7 @@ def fib(n):
 	k = 0  # curr is the kth Fibonacci number (counter)
 
 	while k < n:
-		pred, curr = curr, pred + curr
+		pred, curr = pred + curr, pred
 		k += 1
 	return curr 
 
@@ -18,7 +18,7 @@ function generalization.
 from math import pi
 
 def area(r, shape_constant):
-	assert r >0 , 'A length must be positive'
+	assert r >0 , 'A length must be positive'  # assert evaluate True 
 	return r*r*shape_constant
 
 def area_circle(r):
