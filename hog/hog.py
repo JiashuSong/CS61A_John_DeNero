@@ -20,9 +20,21 @@ def roll_dice(num_rolls, dice=six_sided):
     # These assert statements ensure that num_rolls is a positive integer.
     assert type(num_rolls) == int, 'num_rolls must be an integer.'
     assert num_rolls > 0, 'Must roll at least once.'
-    # BEGIN PROBLEM 1
-    "*** YOUR CODE HERE ***"
-    # END PROBLEM 1
+
+    n = 1
+    total_points = 0
+    while n <= num_rolls:
+        # print("n = ", n)
+        if dice() == 1:
+            total_points = 1
+            # print(total_points)
+            return total_points
+            break
+        else:
+            total_points, n = total_points + dice(), n+1
+            # print('total_points is ', total_points)
+
+    return total_points
 
 
 def free_bacon(score):
@@ -31,9 +43,12 @@ def free_bacon(score):
     score:  The opponent's current score.
     """
     assert score < 100, 'The game should be over.'
-    # BEGIN PROBLEM 2
-    "*** YOUR CODE HERE ***"
-    # END PROBLEM 2
+    
+    score_digits = [int(d) for d in str(score)]
+    print(score_digits)
+    added_score = 10 - min(score_digits[-1], score_digits[-2])
+    return added_score
+
 
 
 def take_turn(num_rolls, opponent_score, dice=six_sided):
@@ -307,7 +322,7 @@ def swap_strategy(score, opponent_score, margin=8, num_rolls=4):
 
 def final_strategy(score, opponent_score):
     """Write a brief description of your final strategy.
-
+x
     *** YOUR DESCRIPTION HERE ***
     """
     # BEGIN PROBLEM 12

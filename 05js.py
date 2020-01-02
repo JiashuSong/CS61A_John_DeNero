@@ -36,8 +36,11 @@ def composel(f, g):
 
 squiple = compose1(square, triple)(3) # x = 3 for both square func and triple func
 squadder = composel(square, make_adder(2))(3) 
+
 """ squadder = 25 
 make_adder(2) return adder func with n = 2, 
 composel() return h func with sqaure(x =3), adder(k =3)
 """
+
+
 
