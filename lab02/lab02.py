@@ -11,12 +11,8 @@ def lambda_curry2(func):
     >>> add_three(5)
     8
     """
-    def h(x):
-        def g(y):
-            return func(x, y)
-    return h
 
-    return ______
+    return lambda x: lambda y: func(x, y)
 
 def count_cond(condition):
     """Returns a function with one parameter N that counts all the numbers from
@@ -46,3 +42,4 @@ def count_cond(condition):
     8
     """
     "*** YOUR CODE HERE ***"
+    

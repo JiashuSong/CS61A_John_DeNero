@@ -36,7 +36,7 @@ def search(f):
 		if f(x):
 			return x 
 		x += 1
-	
+##shorter version: 	
 def search(f):
 	x = 0
 	while not f(x):  # while f(x) does not return true value, x adds 1 then contunue the loop.
@@ -60,7 +60,7 @@ def inverse(f):
 >>> higher_order_lambda(2)(g) # TypeError: 'int' object is not callable
 >>> higher_order_lambda(g)(2) # make sure which arg belongs to which func call.
 4
-
+"""
 # self reference:
 
 def print_all(x):
@@ -81,6 +81,11 @@ def print_sums(n):
 	def next_sum(k):
 		return print_sums(n+k)
 	return next_sum  # return a function next_sum
+
+
+
+
+
 
 # control statement: 
 
